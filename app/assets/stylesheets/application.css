@@ -13,7 +13,64 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap'); /* Chonky text */
+
+ @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /* Bit text */
+ 
+ 
+ h1 {
+   font-family: 'Sigmar One', cursive;
+   font-size: 2em;
+   text-align: center;
+   padding-bottom: 1.5rem;
+ }
+
+ body {
+    font-family: 'VT323', monospace;
+    font-size: 1.5em;
+    background-image: linear-gradient(rgb(179, 0, 255), rgb(255, 255, 227));
+    display: block;
+    padding-inline-start: 40px;
+    padding-bottom: 4rem;
+ }
+
 .container {
     max-width: 960px;
     margin: 0 auto;
 }
+.story-area {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: aliceblue;
+    /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 1px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 20px 30px -10px; */
+    box-shadow: rgba(0, 0, 0, 0.4) 10px 10px;
+}
+
+#text-input {
+    background-color: yellow;
+    width: max-content;
+    display:inline-block;
+    width: 100%;
+    margin: 8px 0;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.text-field {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+

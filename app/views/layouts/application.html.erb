@@ -10,17 +10,27 @@
   </head>
 
   <body>
-    <div class="container">
-      
-     
-    <%= yield %>
 
-    
- <%= form_for @story do |f| %>
-        <%= f.label "Your turn" %>
-        <%= f.text_area :bit, :placeholder => "your turn"  %> <%# , :maxlength => 250? %>
-        <%= f.submit %>
-      <% end %>
+    <div class="outer-container">
+
+      <div class="container">
+        
+      
+      <%= yield %>
+
+      <section class="story-area" id="text-input">
+        <%= form_for @story do |f| %>
+
+          <%= f.label "Your turn" %>
+          <%= f.text_area :bit, :placeholder => "your turn", class: 'text-field'   %> <%# , :maxlength => 250? %>
+          <%= f.submit  %>
+      
+        <% end %>
+        
+      </section>
+      </div>
+
     </div>
+
   </body>
 </html>
