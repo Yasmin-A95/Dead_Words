@@ -4,7 +4,17 @@ class StoriesController < ApplicationController
     @story = Story.new 
     render :index 
   end
-  def create
-    render :index
+
+  def new
+    @story = Story.new
+  end
+  def create 
+    @story = Story.new story_params
+    @story.save
+    redirect_to stories_path
+  end
+  private 
+  def story_params
+    params.require(:story).permit(:bit)
   end
 end
