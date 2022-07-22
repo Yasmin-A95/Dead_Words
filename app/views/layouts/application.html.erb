@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      
+     
+    <%= yield %>
+
+    
+ <%= form_for @story do |f| %>
+        <%= f.label "Your turn" %>
+        <%= f.text_field :bit, :placeholder => "your turn"  %> <%# , :maxlength => 250? %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </body>
+</html>
