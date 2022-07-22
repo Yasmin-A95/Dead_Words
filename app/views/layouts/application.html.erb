@@ -18,7 +18,7 @@
     
  <%= form_for @story do |f| %>
         <%= f.label "Your turn" %>
-        <%= f.text_field :bit, :placeholder => "your turn"  %> <%# , :maxlength => 250? %>
+        <%= f.text_area :bit, :placeholder => "your turn"  %> <%# , :maxlength => 250? %>
         <%= f.submit %>
       <% end %>
     </div>
