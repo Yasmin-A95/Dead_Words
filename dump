@@ -1,0 +1,29 @@
+   <section class="new-story-area">
+       <%= form_for @story do |f| %>
+
+          <%= f.label "Start a new story" %>
+          <%= f.text_area :bit, :placeholder => "Once upon a time, blah blah blah", class: 'text-field' %>
+          <%= f.submit class: "submit-button" %>
+       <% end %>
+
+    </section>
+
+<% else %>
+    <section class="story-area">
+        <% @stories.each do |story| %>
+        <p> <%= story.bit %> </p>
+    <%end %> <%#@stories.first.bit %>
+    </section>
+
+    <section class="story-area" id="text-input">
+            <%= form_for @story do |f| %>
+
+              <%= f.label "Your turn" %>
+              <%= f.text_area :bit, :placeholder => "Once upon a time, blah blah blah", class: 'text-field'   %> <%# , :maxlength => 250? %>
+              <%= f.submit class: "submit-button" %>
+          
+            <% end %>
+            
+          </section>
+        
+<% end %>

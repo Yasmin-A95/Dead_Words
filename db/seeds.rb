@@ -1,10 +1,15 @@
-Story.destroy_all 
+Contribution.destroy_all 
 
-s1 = Story.create :bit => "Once upon a time in a land far away there was a man named Tony"
-s2 = Story.create :bit => "The thing about Tony was that he had a really bad temper, he was in the habit of picking fights with people twice his size"
-s3 = Story.create :bit => "Except he had another pretty ugly quality, for Tony was also a coward. When the other person would fight back Tony would realise he was out of his depth"
-s4 = Story.create :bit => "He had a trick up his sleeve though, he would fall over on his back while protecting his crotch with his hands he would squeel I'm just a little guy! You wouldnt want to hurt a lil guy would you?"
-s5 = Story.create :bit => "The other person would walk away every time, disgusted by Tony but nontheless unwilling to hit somebody so pathetic"
-
-
-puts "#{ Story.count } storys "
+Contribution.create :story_bit => "Once upon a time"
+Contribution.create :story_bit => "a man was thinking bout those beans"
+Contribution.create :story_bit => "those beans, oh so round and succulent..."
+Contribution.create :story_bit => "He tasted the beans when he closed his eyes. He tasted the beans when he slept at night. He tasted the beans when he wandered far. He tasted the beans, with his heart alight."
+Contribution.create :story_bit => "'Jimbo, boy! Are you thinking about them beans again?!' his mother hollered, as he found himself in a trance-like state, day-dreaming about them beans"
+Contribution.create :story_bit => "Everyday, all he thinks about is beans Beans BEANS. He realized he needs help and went to town to hopefully find the help he needs.."
+Contribution.create :story_bit => "Jimbo came across a very special therapist, a bean therapist. The bean therapist gave Jimbo one word of advice... 'Jimbo, when the beans cross your head, remember always misrecollect."
+Contribution.create :story_bit => "That's when everything turned pear shaped,(or should I say bean shaped). There was a free the bean protest on at town hall, where bean lovers had come together from near and far to march for free beans for everyone."
+Contribution.create :story_bit => "Jimbo emptied his pockets of beans as payment, eager to get a closer look he rushed down to town hall. He couldn't believe his eyes, thousands of like minded bean lovers had all come to his home town. While making his way through the crowd he noticed a loud voice began to speak"
+Contribution.create :story_bit => "He blocked out the voice, remembering how his mother used to say he was 'full of beans,' when he was a kid. You're right, ma, he thought. He was full of beans. Full of those beans. The bean lovers watched in horror as Jimbo grabbed a spoon from a nearby diner (serving beans) and began to dig out the juiciest, beaniest beans of them all: his kidneys. People tried to intervene as he lay down on the sidewalk, digging for thos beans, but as they got close he jabbed at them with the blunt spoon, screaming that he'd take their beans, too."
+Contribution.create :story_bit => "The juices from Jimbo's big ol' Kidney's ran down his hands and covered his clothes. He bled out on the sidewalk. Darkness took him. He strayed out of thought and time. Stars wheeled overhead, and every day was as long as the life age of the earth. When he awoke in the hospital gown and looked down to see a bean-sized hole in his torso. He reached into the jar of Adzuki beans on the bedstand and tried to fill the gape to no avail. When he stood, Adzuki simply fell from his wounds, onto the floor. It was his greatest wish to eat the kidney bean, but it seemed that someone else ate them before he could. He jammed fistfullls of dried Adzuki into his mouth."
+Contribution.create :story_bit => "After a few moments a loud 'pop' was heard and a big bloodied kidney bean popped out. The crowd gasps in horror, it flew across the room and into one of the bean protester gasping mouths."
+puts "#{ Contribution.count } contributions "
