@@ -9,11 +9,14 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-  
-    <section class="instructions" id="draggy" draggable="true">
+
+<div class="outter-most-container">
+    <button class="tool-bar" onclick="$('.instructions').removeClass('hidden')">Instructions</button> 
+
+    <section class="instructions hidden" id="draggy" draggable="true">
       <header>
         <div class="controls">
-          <button type="button" onclick="document.querySelector('.instructions').classList.add('hidden')"x>X</button>
+          <button class = "pixel-button" onclick="$('.instructions').addClass('hidden')"> <%= image_tag('pixelX.jpg', class: "pixel-img") %> </button>
         </div>
         <h1>Make a Story as a ~community~</h1> 
         <ul>
@@ -36,7 +39,6 @@
       </div>
 
     </div>
-
-
+</div>
 </body>
 </html>
