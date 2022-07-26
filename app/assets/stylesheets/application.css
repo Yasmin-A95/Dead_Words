@@ -85,8 +85,8 @@
     padding: 11px 19px;
     font-size: 22px;
     border-color: rgba(255, 255, 227, 0.1) rgba(255, 255, 227, 0.1) rgba(255, 255, 227, 0.25);
-    background-color: rgba(251795, 0, 255, 0.5);
-    text-shadow: 0 -1px 0 rgb(0 0 0 / 25%);    
+    background-color: rgba(255, 0, 255, 0.5);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);    
     color: #ffffff;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -127,6 +127,9 @@
     width: 1em;
 }
 .pixel-button {
-    border: none;
+    border: solid red;
+    color: red;
     background-color: rgba(0, 0, 0, 0);
+    font-family: 'VT323', monospace;
+    border-radius: 50%;
 }
