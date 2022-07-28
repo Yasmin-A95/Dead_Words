@@ -14,6 +14,11 @@
 //= require jquery
 //= require_tree .
 
+const fetchLatest = function () {
+  $("#updated-text-area").load("/contributions/latest");
+  setTimeout(fetchLatest, 3000);
+};
+
 const toggle = function () {
   if ($(".instructions").hasClass("hidden")) {
     $(".instructions").removeClass("hidden");
@@ -23,6 +28,4 @@ const toggle = function () {
     $(".tog-btn").removeClass("angry-tog-btn");
   }
 };
-
-
 

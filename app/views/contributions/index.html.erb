@@ -1,17 +1,18 @@
 <h2>Welcome To The Wonderful World of This Site Existing</h2>
 
 <script>
-  const fetchLatest = function () {
-    $('#updated-text-area').load('/contributions/latest');
-    setTimeout(fetchLatest, 3000)
-  }
   fetchLatest()
 </script>
 
-<section class="story-area" id="updated-text-area">
-    <% @contributions.each do |contribution| %>
+<section class="story-area">
+<div id="updated-text-area">
+  <% @contributions.each do |contribution| %>
     <p> <%= contribution.story_bit %> </p>
-<%end %>
+   <% end %>
+   </div>
+   <div class="subsection">
+   <p class="staging-text"></p>
+   </div>
 </section>
  
 
@@ -19,7 +20,31 @@
   <%= form_for @contribution do |f| %>
       <%= f.label "Your turn" %>
       <%= f.text_area :story_bit, :placeholder => "Once upon a time, blah blah blah", class: 'text-field'%>
-      <%= f.submit "Post" %>   
-      <button class="submit-button right-side">Submit</button> 
+      <%= f.submit "Post", class: "submit-button real hidden" %>    
   <% end %>
-</section> 
+  <button class="submit-button jk">Submit</button>
+</section>
+
+
+<button class="submit-button hidden" id="edit-btn">Edit?</button> <%# last working state check word doc for what you were doing more recently %> 
+<script> 
+  $("#edit-btn").on("click", function(){
+    $('.text-field').focus()
+  });
+
+  const staging = function (str) {
+    $(".staging-text:last").append(str + " ")
+    $("#edit-btn").removeClass("hidden")
+    $(".staging-text:last").append($("#edit-btn"))
+    };
+  const hideBtn = function () {
+    $("#edit-btn").addClass("hidden")
+  }
+  $(".jk").on("click", function(){
+    staging($('.text-field').val())
+    $(".jk").addClass("hidden")
+    $(".real").removeClass("hidden")
+  
+    });
+
+</script>
