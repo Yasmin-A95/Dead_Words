@@ -13,3 +13,16 @@
 //= require rails-ujs
 //= require jquery
 //= require_tree .
+
+const toggle = function () {
+  if ($(".instructions").hasClass("hidden")) {
+    $(".instructions").removeClass("hidden");
+    $(".tog-btn").addClass("angry-tog-btn");
+  } else {
+    $(".instructions").addClass("hidden");
+    $(".tog-btn").removeClass("angry-tog-btn");
+  }
+};
+
+
+

@@ -19,6 +19,7 @@
   <%= form_for @contribution do |f| %>
       <%= f.label "Your turn" %>
       <%= f.text_area :story_bit, :placeholder => "Once upon a time, blah blah blah", class: 'text-field'%>
-      <%= f.submit "Post", class: "submit-button" %>    
+      <%= f.submit "Post" %>   
+      <button class="submit-button right-side">Submit</button> 
   <% end %>
-</section>
+</section> 

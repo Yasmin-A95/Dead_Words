@@ -8,37 +8,30 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
+  <body>  
+    <div class="outter-most-container">
+      <button class="tog-btn" onclick="toggle()"> Instructions </button> 
 
-<div class="outter-most-container">
-    <button class="tool-bar" onclick="$('.instructions').removeClass('hidden')">Instructions</button> 
 
-    <section class="instructions hidden" id="draggy" draggable="true">
-      <header>
-        <div class="controls">
-          <button class = "pixel-button" onclick="$('.instructions').addClass('hidden')"> X </button>
-        </div>
-        <h1>Make a Story as a ~community~</h1> 
-        <ul>
-          <li>You write something,</li>
-          <li>Then somebody else does!</li>
-          <li>Continue the story from where the last person left off</li>
-        </ul>
-      </header>
-    </section>
-
-    <div class="outer-container">
+      <section class="instructions hidden" id="draggy" draggable="true">
+        <header>
+          <h1> Make a Story as a ~community~ </h1> 
+          <ul>
+            <li> You write something </li>
+            <li> Then somebody else does </li>
+            <li> Continue the story from where the last person left off </li>
+          </ul>
+        </header>
+      </section>
 
       <div class="container">
+            
+          
+        <%= yield %>
+
+
         
-      
-      <%= yield %>
-
-
-     
-      </div>
-
+        </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

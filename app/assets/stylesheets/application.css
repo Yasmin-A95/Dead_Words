@@ -1,4 +1,5 @@
 /*
+
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -36,6 +37,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 .outter-most-container {
     max-width: 1500px;
     margin: 0 auto;
@@ -110,14 +112,17 @@
     margin-top: 1em;
 }
 
-.tool-bar {
+.tog-btn {
     position: relative;
     margin-left: 0;
     font-family: 'VT323', monospace;
     box-shadow: 6px 6px 0 #000;
     border: 4px solid #000;
-    background: #eff;
+    background: rgb(6, 204, 204);
     font-size: 1.5em;
+}
+.angry-tog-btn {
+    background: rgb(217, 27, 27);
 }
 .hidden {
     visibility: hidden;
@@ -132,4 +137,7 @@
     background-color: rgba(0, 0, 0, 0);
     font-family: 'VT323', monospace;
     border-radius: 50%;
+}
+.right-side {
+    float: right;
 }
