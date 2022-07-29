@@ -1,24 +1,47 @@
-# README
+# Dead Words
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. What is this anyway?
+* See [this](
+https://en.wikipedia.org/wiki/Exquisite_corpse) for the inspiration behind the game
+* It's a short story, but communal! 
+* A simple story telling game based on taking the last guy's idea and running with it. Created with rails and deployed via heroku. 
 
-Things you may want to cover:
+2. Where is this anyway?
+Click [here](https://deadwords1.herokuapp.com/) to use the app 
 
-* Ruby version
+3. Instructions 
 
-* System dependencies
+* See button on the top left of the page.  
+* You write something.
+* then somebody else does.
+* Continue from where the last person left off.
 
-* Configuration
+4. Check out the repository 
 
-* Database creation
+```
+git@github.com:Yasmin-A95/Project_1.git
+```
 
-* Database initialization
+5. Made using:
 
-* How to run the test suite
+* Ruby 2.7.6
+* PostgreSQL 14
+* jQuery
 
-* Services (job queues, cache servers, search engines, etc.)
+6. Project status
+* MVP version 1 in working order, page reloads every three seconds to make sure the feed is updated regularly in case multiple people are using the site at once.
 
-* Deployment instructions
+7. Where to next?
 
-* ...
+Additional features I hope to include are:
+
+In the Immediate Future: 
+* A markov chain generative text button
+* Animation to soften transitions between screen states. 
+
+In a Possible Future: 
+
+These will be implemented if/when needed.
+* Multiple posts going at once
+* Sign in's and admin's
+* An option for a user to create additional rules or themes for a post
