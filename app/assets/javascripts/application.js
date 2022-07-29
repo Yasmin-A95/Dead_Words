@@ -29,3 +29,11 @@ const toggle = function () {
   }
 };
 
+const staging = function (str) {
+  $(".staging-text:last").append(str + " ")
+  $("#edit-btn").removeClass("hidden")
+  $(".staging-text:last").append($("#edit-btn"))
+  };
+const hideBtn = function () {
+  $("#edit-btn").addClass("hidden")
+}

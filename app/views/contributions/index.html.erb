@@ -2,10 +2,10 @@
 
 
 <script>
-  fetchLatest()
+  fetchLatest() // this updates the feed in case somebody has posted while a user is sitting on the page
 </script>
 
-<section class="story-area">
+<section class="story-area"> <%# Everyones submissions are displayed here, and then this area is covered by fetch latest, prevents lagging %>
 <div id="updated-text-area">
   <% @contributions.each do |contribution| %>
     <p> <%= contribution.story_bit %> </p>
@@ -21,27 +21,19 @@
   <%= form_for @contribution do |f| %>
       <%= f.label "Your turn" %>
       <%= f.text_area :story_bit, :placeholder => "Once upon a time, blah blah blah", class: 'text-field'%>
-      <%= f.submit "Post", class: "submit-button real hidden" %>    
+      <%= f.submit "Post", class: "submit-button real hidden" %>     <%# this is to facilitate the chance to see your submission as it'll look once posted, and then get to edit it in case you made a mistake %>
   <% end %>
-  <button class="submit-button jk">Submit</button>
+  <button class="submit-button jk">Submit</button> <%# tricky fake submitit button because you probably won't realise you made a mistake until it's too late %>
 </section>
 
 
-<button class="submit-button hidden" id="edit-btn">Edit?</button> 
+<button class="submit-button hidden" id="edit-btn">Edit?</button>  <%# this button will no longer be hidden after the user has had the chance to edit their work %>
 
-<script> 
+<script> // click events, see application.js for all other script
   $("#edit-btn").on("click", function(){
     $('.text-field').focus()
   });
 
-  const staging = function (str) {
-    $(".staging-text:last").append(str + " ")
-    $("#edit-btn").removeClass("hidden")
-    $(".staging-text:last").append($("#edit-btn"))
-    };
-  const hideBtn = function () {
-    $("#edit-btn").addClass("hidden")
-  }
   $(".jk").on("click", function(){
     staging($('.text-field').val())
     $(".jk").addClass("hidden")
