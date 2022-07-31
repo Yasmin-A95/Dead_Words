@@ -41,3 +41,20 @@
   
     });
 </script>
+
+<script class="marko">
+const marko = function (string) {
+  return string.split(' ')
+  // so there's 7 different likelihoods here
+
+  // when a, there's a 20% liklihood of a again, and a 20% liklihood of b, and a 60% liklihood of c
+  
+  // when b, there's a 50% liklihood of b again, and a 50% liklihood of a 
+
+  // when c, there's a 70% liklihood of b, and 0% liklihood of c again, and a 30% liklihood of a recurring again
+
+  // for each word there is a new liklihood, but then there'd only ever be three words
+};
+
+console.log(marko('hi there'));
+</script>
