@@ -16,22 +16,17 @@ Click [here](https://deadwords1.herokuapp.com/) to use the app
 * then somebody else does.
 * Continue from where the last person left off.
 
-4. Check out the repository 
 
-```
-git@github.com:Yasmin-A95/Project_1.git
-```
-
-5. Made using:
+4. Made using:
 
 * Ruby 2.7.6
 * PostgreSQL 14
 * jQuery
 
-6. Project status
+5. Project status
 * MVP version 1 in working order, page reloads every three seconds to make sure the feed is updated regularly in case multiple people are using the site at once.
 
-7. Where to next?
+6. Where to next?
 
 Additional features I hope to include are:
 
